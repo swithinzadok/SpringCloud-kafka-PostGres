@@ -1,0 +1,13 @@
+spring.cloud:
+  function:
+    definition: producer;processor;consumer
+  stream:
+    bindings:
+      producer-out-0:
+        destination: messages
+      processor-in-0:
+        destination: messages
+      processor-out-0:
+        destination: processedMessages
+      consumer-in-0:
+        destination: processedMessages
